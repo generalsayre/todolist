@@ -3,3 +3,21 @@ body {
     color:black;
     background-color:white;
 }
+.todo-container {
+    width:300px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    background: white;
+    margin: 5px 0;
+    padding: 10px;
+    display: flex;
+    justify-content:space-between;
+}
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
