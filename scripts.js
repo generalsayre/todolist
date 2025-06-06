@@ -29,3 +29,11 @@ deleteBtn.addEventListener('click', function (e) {
 
 li.apendChild(deleteBtn);
 list.appendChild(li);
+
+let todos = JSON.parse(localStorage.getItem('todos')) || [];
+
+function saveTodos() {
+  localStorage.setItem('todos', JSON.stringify(todos));
+}
+
+todos.forEach(task => addTask(task));
