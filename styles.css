@@ -11,7 +11,8 @@ ul {
     padding: 0;
 }
 li {
-    background: black;
+    background: white;
+    color: black;
     margin: 5px 0;
     padding: 10px;
     display: flex;
