@@ -54,6 +54,6 @@ li {
 }
 
 .shake {
-    animation: shake .3s;
+    animation: shake 1s;
     border: 2px solid red;
 }
