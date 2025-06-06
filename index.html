@@ -8,9 +8,9 @@
 <body>
     <h1> TO DO LIST</h1>
     <div class="todo-container">
-    <form id="todo-form">
+    <form id="todo-form" onsubmit="addTask(); return false;"">
         <input class="submitFrm" type="text" id="new-task" placeholder="Enter a task..." />
-        <button onclick ="addTask()" class="submitBtn" type="submit">Add</button>
+        <button onclick ="addTask()" class="submitBtn" type="button">Add</button>
     </form>
     <ul id="todo-list">
       
