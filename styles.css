@@ -96,10 +96,10 @@ li {
 .custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
   content: "";
   position: absolute;
-  left: 6px;
-  top: 2px;
+  left: 12px;
+  top: 3px;
   width: 5px;
-  height: 10px;
+  height: 20px;
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
@@ -108,4 +108,3 @@ li {
 .custom-checkbox input[type="checkbox"]:checked + .checkmark {
   background-color: blue;
   border-color: #4caf50;
-}
