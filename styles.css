@@ -36,9 +36,9 @@ li {
     border-radius: 5px;
 }
 .submitBtn  {
-    border: 2px solid black;
+    border: 2px solid rgb(142, 199, 255);
     background-color: rgb(142, 199, 255);
-    color: black;
+    color: white;
     padding: 7px 14px;
     font-size: 16px;
     cursor: pointer;
