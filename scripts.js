@@ -1,3 +1,4 @@
+>
     let tasks = [];
 
     function saveTasks() {
@@ -64,11 +65,37 @@
         saveTasks();
       });
 
+      span.addEventListener('dblclick', function () {
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.value = taskObj.text;
+        input.classList.add('task-editing');
+
+        li.replaceChild(input, span);
+        input.focus();
+
+        input.addEventListener('blur', () => finishEdit(input));
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') finishEdit(input);
+        });
+
+        function finishEdit(editInput) {
+          const newText = editInput.value.trim();
+          if (newText !== "") {
+            taskObj.text = newText;
+            saveTasks();
+          }
+          span.textContent = taskObj.text;
+          li.replaceChild(span, editInput);
+        }
+      });
+
       li.appendChild(label);
       li.appendChild(span);
 
+      // 🗑️ Delete task (ignore clicks on label/checkbox)
       li.addEventListener('click', function (e) {
-        if (e.target.tagName.toLowerCase() === 'input') return;
+        if (e.target.closest('label')) return;
 
         if (confirm("Delete this task?")) {
           li.classList.add('fade-out');
